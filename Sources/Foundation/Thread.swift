@@ -7,7 +7,11 @@
 // See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
 //
 
+#if os(Linux)
+import CoreFoundation
+#else
 @_implementationOnly import CoreFoundation
+#endif
 
 // WORKAROUND_SR9811
 #if os(Windows)

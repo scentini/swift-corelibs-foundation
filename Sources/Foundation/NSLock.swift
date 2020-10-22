@@ -7,7 +7,12 @@
 // See http://swift.org/CONTRIBUTORS.txt for the list of Swift project authors
 //
 
+#if os(Linux)
+import CoreFoundation
+#else
 @_implementationOnly import CoreFoundation
+#endif
+
 #if os(Windows)
 import WinSDK
 #endif

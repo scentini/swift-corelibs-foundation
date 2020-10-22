@@ -10,7 +10,12 @@
 //
 //===----------------------------------------------------------------------===//
 
+#if os(Linux)
+import CoreFoundation
+#else
 @_implementationOnly import CoreFoundation
+#endif
+
 
 #if canImport(ObjectiveC)
 import ObjectiveC

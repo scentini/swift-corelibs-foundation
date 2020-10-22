@@ -19,7 +19,12 @@ internal func malloc_good_size(_ size: Int) -> Int {
 }
 #endif
 
+
+#if os(Linux)
+import CoreFoundation
+#else
 @_implementationOnly import CoreFoundation
+#endif
 
 internal func __NSDataInvokeDeallocatorUnmap(_ mem: UnsafeMutableRawPointer, _ length: Int) {
 #if os(Windows)
